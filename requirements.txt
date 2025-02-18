@@ -1,0 +1,19 @@
+statsmodels
+scipy
+papermill
+seaborn
+matplotlib
+scikit-learn
+catboost
+xgboost
+dill
+Flask
+imblearn
+lightgbm
+xgboost
+flask
+flask_cors
+pandas
+numpy
+openpyxl
+-e .
