@@ -1,7 +1,7 @@
 import os
 import sys
 import pandas as pd
-
+import time
 #from pathlib import Path
 #sys.path.append(str(Path(__file__).parent.parent))
 
@@ -45,6 +45,8 @@ class DataIngestion:
             test_set.to_csv(self.ingestion_config.test_data_path,index=False,header=True)
             
             logging.info("Train/Test split is completed")
+            
+            time.sleep(2)  # Wait 1 second before reading
             
             return(
                 self.ingestion_config.train_data_path,

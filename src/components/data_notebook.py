@@ -14,6 +14,10 @@ from src.logger import logging
 
 from src.components.data_ingestion import DataIngestion
 from src.components.data_ingestion import DataIngestionConfig
+from src.components.data_transformation import DataTransformation
+from src.components.data_transformation import DataTransformationConfig
+from src.components.model_trainer import ModelTrainer
+from src.components.model_trainer import ModelTrainerConfig
 
 @dataclass
 class DataNotebookConfig:
@@ -45,7 +49,18 @@ if __name__ == "__main__":
     
     data_ingestion = DataIngestion()
     train_path,test_path = data_ingestion.initiate_data_ingestion(excelpath)
-    
-    #prop_df = pd.read_excel(excelpath)
-
     print("Data Ingestion is successful")
+    
+    data_transformation = DataTransformation()
+    train_arr,test_arr,_ = data_transformation.initiate_data_transformation(train_path,test_path)
+    
+    print("Data transformation is successful")
+    
+    model_trainer = ModelTrainer()
+    bestmodel,bestmodelaccuracy = model_trainer.initiate_model_trainer(train_arr,test_arr)
+    
+    print("bestmodel:",bestmodel)
+    print("bestmodelaccuracy:",bestmodelaccuracy)
+    
+    print("Data modeling is successful")
+    
