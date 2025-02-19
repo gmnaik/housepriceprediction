@@ -3,15 +3,11 @@ import sys
 import pandas as pd
 import papermill as pm
 
-#from pathlib import Path
-#sys.path.append(str(Path(__file__).parent.parent))
-
 from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
 
 from src.exception import CustomException
 from src.logger import logging
-
 from src.components.data_ingestion import DataIngestion
 from src.components.data_ingestion import DataIngestionConfig
 from src.components.data_transformation import DataTransformation

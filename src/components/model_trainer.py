@@ -1,12 +1,10 @@
 import os
 import sys
-from dataclasses import dataclass
-
 import numpy as np
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
-
+from dataclasses import dataclass
 
 from sklearn.neighbors import KNeighborsRegressor
 from sklearn.tree import DecisionTreeRegressor
@@ -17,7 +15,6 @@ from sklearn.metrics import r2_score, mean_absolute_error, mean_squared_error
 from sklearn.model_selection import RandomizedSearchCV
 from catboost import CatBoostRegressor
 from xgboost import XGBRegressor
-
 from sklearn.model_selection import GridSearchCV
 
 from src.exception import CustomException
@@ -29,7 +26,6 @@ from sklearn.metrics import roc_curve, roc_auc_score
 @dataclass
 class ModelTrainerConfig:
     trained_model_file_path = os.path.join("artifacts","model.pkl")
-    
 class ModelTrainer:
     def __init__(self):
         self.model_trainer_config = ModelTrainerConfig()
@@ -145,14 +141,12 @@ class ModelTrainer:
 
                 model_train_mae , model_test_rmse,model_test_r2score = self.evaluate_model(y_test, y_test_pred)
 
-                
                 print(list(models.keys())[i])
                 model_list.append(list(models.keys())[i])
                 
                 print('Model performance for Training set')
                 print("- RMSE score: \n{:.4f}".format(model_train_rmse))
                 print("- R2 score report:\n {}".format(model_train_r2score))
-
                 
                 
                 print('Model performance for Test set')
@@ -185,8 +179,6 @@ class ModelTrainer:
             logging.info("Best model found")
             
             save_object(file_path=self.model_trainer_config.trained_model_file_path,obj=best_model) 
-            
-            
             
             return best_model_name,model_dict[best_model_name]
         
