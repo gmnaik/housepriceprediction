@@ -19,6 +19,7 @@ from src.utils import save_object
 @dataclass
 class DataTransformationConfig:
     preprocessor_obj_file_path = os.path.join('artifacts',"preprocessor.pkl")
+    y_scaled_file_path = os.path.join('artifacts', "scaler_y.pkl")
 
 class MultiColumnLabelEncoder(TransformerMixin):
     def fit(self, X, y=None):
@@ -76,6 +77,8 @@ class DataTransformation:
             train_df = pd.read_csv(train_path)
             test_df = pd.read_csv(test_path)
             
+            train_df = train_df.drop(columns=['Unnamed: 0'], errors='ignore')
+            
             numerical_columns = [feature for feature in train_df.columns if train_df[feature].dtype != 'O']               # 0 means object
             categorical_columns = [feature for feature in train_df.columns if train_df[feature].dtype == 'O']
             numerical_columns.remove("Price_Millions")
@@ -104,8 +107,10 @@ class DataTransformation:
             test_arr = np.c_[X_test,np.array(y_test)]
             
             logging.info("Saved preprocessing object.")
-            
             save_object(file_path = self.data_transformation_config.preprocessor_obj_file_path,obj=preprocessing_obj)
+            
+            logging.info("Saved y-scaler object.")
+            save_object(file_path = self.data_transformation_config.y_scaled_file_path,obj=scaler_y)
             
             return(
                 train_arr,

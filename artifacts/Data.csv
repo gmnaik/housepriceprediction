@@ -271,7 +271,7 @@ Unnamed: 0,Floor No,Units Available,Covered Area,Carpet Area,Sqft Price,Total Am
 269,2,0,728,555,4808,0,23,4,3.500224,Ready to Move,Vitrified,N,Unfurnished,Unknown,Resale,Apartment,Thane,2,0,1,2,Freehold
 270,3,0,300,250,6000,1,16,4,1.8,Ready to Move,Vitrified,N,Semi-Furnished,East,New Property,Apartment,Thane,1,0,1,3,Co-operative Society
 271,6,0,600,458,7000,0,23,8,4.2,Ready to Move,Vitrified,N,Unfurnished,Unknown,Resale,Apartment,Thane,1,0,1,0,Freehold
-272,6,0,1000,763,4600,0,23,7,4.6,0,Vitrified,N,Unfurnished,Unknown,Resale,Apartment,Thane,2,0,2,2,Freehold
+272,6,0,1000,763,4600,0,23,7,4.6,Under Construction,Vitrified,N,Unfurnished,Unknown,Resale,Apartment,Thane,2,0,2,2,Freehold
 273,1,0,555,420,7387,10,24,7,4.099785,Ready to Move,Normal Tiles/Kotah Stone,N,Unfurnished,Unknown,Resale,Apartment,Thane,1,0,1,1,Freehold
 274,4,0,575,439,5739,90,23,5,3.299925,Ready to Move,Vitrified,N,Unfurnished,Unknown,Resale,Apartment,Thane,1,1,1,2,Freehold
 275,13,102,476,385,3200000,90,19,24,3.2,Under Construction,Vitrified,Y,Unfurnished,East,New Property,Apartment,Thane,1,1,1,1,Freehold
@@ -1560,7 +1560,7 @@ Unnamed: 0,Floor No,Units Available,Covered Area,Carpet Area,Sqft Price,Total Am
 1558,0,0,500,475,14200,1,5,4,7.1,Ready to Move,Vitrified,Y,Unfurnished,North - East,Resale,Apartment,Mumbai,1,0,1,1,Co-operative Society
 1559,1,0,500,350,17400,0,30,3,8.7,Ready to Move,Vitrified,Y,Unfurnished,Unknown,Resale,Apartment,Mumbai,1,0,1,1,Freehold
 1560,3,0,850,520,11765,0,38,7,10.00025,Ready to Move,Vitrified,N,Semi-Furnished,Unknown,Resale,Apartment,Mumbai,2,0,2,1,Freehold
-1561,0,0,600,458,26667,0,23,14,16.0002,Ready to Move,Vitrified,N,0,Unknown,Resale,Apartment,Mumbai,2,0,2,0,Freehold
+1561,0,0,600,458,26667,0,23,14,16.0002,Ready to Move,Vitrified,N,Unfurnished,Unknown,Resale,Apartment,Mumbai,2,0,2,0,Freehold
 1562,4,0,500,381,16000,0,23,7,8.0,Ready to Move,Vitrified,Y,Semi-Furnished,Unknown,Resale,Apartment,Mumbai,1,0,1,1,Freehold
 1563,0,0,400,305,14475,0,23,7,5.79,Ready to Move,Vitrified,N,Semi-Furnished,Unknown,Resale,Apartment,Mumbai,1,0,1,1,Freehold
 1564,5,0,700,534,16429,0,23,6,11.5003,Ready to Move,Vitrified,Y,Furnished,Unknown,Resale,Apartment,Mumbai,2,0,2,3,Freehold
@@ -1614,7 +1614,7 @@ Unnamed: 0,Floor No,Units Available,Covered Area,Carpet Area,Sqft Price,Total Am
 1612,3,2,426,325,15962,89,23,17,6.799812,Ready to Move,Wooden,N,Unfurnished,North - East,Resale,Apartment,Mumbai,1,1,1,1,Co-operative Society
 1613,0,0,380,290,19737,6,23,4,7.50006,Ready to Move,Vitrified,N,Semi-Furnished,North - East,Resale,Builder Floor Apartment,Mumbai,1,0,1,1,Co-operative Society
 1614,1,0,560,480,17857,89,14,5,9.99992,Ready to Move,Vitrified,Y,Unfurnished,East,Resale,Apartment,Mumbai,2,1,2,1,Freehold
-1615,11,0,970,740,9288,89,23,17,9.00936,Under Construction,Vitrified,N,0,North,Resale,Apartment,Mumbai,2,1,1,3,Freehold
+1615,11,0,970,740,9288,89,23,17,9.00936,Under Construction,Vitrified,N,Unfurnished,North,Resale,Apartment,Mumbai,2,1,1,3,Freehold
 1616,3,0,550,410,13636,90,25,6,7.4998,Ready to Move,Vitrified,Y,Unfurnished,East,Resale,Apartment,Mumbai,1,1,1,1,Freehold
 1617,1,0,520,397,31538,5,23,7,16.39976,Ready to Move,Vitrified,Y,Semi-Furnished,Unknown,Resale,Apartment,Mumbai,1,0,1,1,Leasehold
 1618,10,1,532,431,9700000,90,19,12,9.7,Ready to Move,Vitrified,N,Unfurnished,East,Resale,Apartment,Mumbai,2,1,1,1,Freehold
@@ -2298,7 +2298,7 @@ Unnamed: 0,Floor No,Units Available,Covered Area,Carpet Area,Sqft Price,Total Am
 2296,9,3,1106,1106,52803,90,0,32,13.4999095,Under Construction,Vitrified,Y,Semi-Furnished,West,New Property,Apartment,Mumbai,3,1,3,1,Leasehold
 2297,20,3,905,905,49723,90,0,40,44.999315,Ready to Move,Marble,Y,Unfurnished,East,New Property,Apartment,Mumbai,2,1,2,1,Leasehold
 2298,25,0,1200,710,34000000,89,40,34,13.4999095,Ready to Move,Vitrified,Y,Unfurnished,East,New Property,Apartment,Mumbai,2,1,2,1,Freehold
-2299,2,0,6000,6000,17,0,0,7,0.102,0,Vitrified,Y,Unfurnished,Unknown,Resale,Apartment,Mumbai,1,0,2,1,Freehold
+2299,2,0,6000,6000,17,0,0,7,0.102,Under Construction,Vitrified,Y,Unfurnished,Unknown,Resale,Apartment,Mumbai,1,0,2,1,Freehold
 2300,1,0,300,260,2833,0,13,4,0.8499,Ready to Move,Vitrified,Y,Unfurnished,East,Resale,Apartment,Mumbai,2,0,1,1,Freehold
 2301,2,0,450,400,11111,2,11,3,4.99995,Ready to Move,Vitrified,Y,Unfurnished,West,Resale,Apartment,Mumbai,1,0,1,1,Freehold
 2302,3,1,3200,2443,50000,89,23,4,13.4999095,Ready to Move,Marble,Y,Furnished,East,Resale,Apartment,Mumbai,6,1,6,7,Freehold
@@ -7101,7 +7101,7 @@ Unnamed: 0,Floor No,Units Available,Covered Area,Carpet Area,Sqft Price,Total Am
 7099,6,0,421,321,11639,0,23,10,4.900019,Ready to Move,Vitrified,N,Semi-Furnished,Unknown,Resale,Apartment,Mumbai,1,0,1,1,Freehold
 7100,4,0,430,370,10698,1,13,4,4.60014,Ready to Move,Vitrified,Y,Unfurnished,East,Resale,Apartment,Mumbai,1,0,1,1,Freehold
 7101,17,3,1062,810,8945,0,23,25,9.49959,Ready to Move,Vitrified,N,Unfurnished,Unknown,Resale,Apartment,Mumbai,6,0,2,4,Freehold
-7102,0,0,875,668,9143,0,23,14,8.000125,Under Construction,Vitrified,N,0,Unknown,Resale,Apartment,Mumbai,2,0,2,0,Freehold
+7102,0,0,875,668,9143,0,23,14,8.000125,Under Construction,Vitrified,N,Unfurnished,Unknown,Resale,Apartment,Mumbai,2,0,2,0,Freehold
 7103,3,0,247,200,1300000,0,19,3,1.3,Ready to Move,Vitrified,Y,Unfurnished,East,Resale,Villa,Mumbai,1,0,1,1,Freehold
 7104,4,0,710,575,5500000,0,19,6,5.5,Ready to Move,Vitrified,N,Unfurnished,Unknown,Resale,Apartment,Mumbai,1,0,1,1,Freehold
 7105,3,1,800,600,11750,8,25,3,9.4,Ready to Move,Vitrified,N,Semi-Furnished,East,Resale,Apartment,Mumbai,2,1,2,1,Freehold
@@ -7307,7 +7307,7 @@ Unnamed: 0,Floor No,Units Available,Covered Area,Carpet Area,Sqft Price,Total Am
 7305,3,0,423,826,9220,9,-95,14,3.90006,Ready to Move,Vitrified,N,Semi-Furnished,Unknown,New Property,Apartment,Mumbai,2,0,2,2,Freehold
 7306,7,1,577,440,3813,0,23,9,2.200101,Ready to Move,Vitrified,N,Unfurnished,Unknown,Resale,Apartment,Mumbai,1,0,1,1,Freehold
 7307,7,0,590,400,5424,0,32,9,3.20016,Ready to Move,Vitrified,N,Semi-Furnished,Unknown,Resale,Apartment,Mumbai,1,0,1,3,Freehold
-7308,4,0,780,550,5769,0,29,4,4.49982,0,Vitrified,N,Furnished,Unknown,Resale,Builder Floor Apartment,Mumbai,2,0,2,1,Freehold
+7308,4,0,780,550,5769,0,29,4,4.49982,Under Construction,Vitrified,N,Furnished,Unknown,Resale,Builder Floor Apartment,Mumbai,2,0,2,1,Freehold
 7309,1,1,750,550,4667,0,26,9,3.50025,Ready to Move,Vitrified,N,Semi-Furnished,Unknown,Resale,Apartment,Mumbai,1,0,1,1,Freehold
 7310,4,0,620,473,4516,0,23,8,2.79992,Ready to Move,Vitrified,N,Unfurnished,Unknown,Resale,Apartment,Mumbai,1,0,1,0,Freehold
 7311,2,0,550,265,4545,89,51,4,2.49975,Ready to Move,Vitrified,Y,Unfurnished,East,Resale,Apartment,Mumbai,1,1,1,1,Freehold
@@ -8269,7 +8269,7 @@ Unnamed: 0,Floor No,Units Available,Covered Area,Carpet Area,Sqft Price,Total Am
 8267,6,0,421,321,11639,0,23,10,4.900019,Ready to Move,Vitrified,N,Semi-Furnished,Unknown,Resale,Apartment,Mumbai,1,0,1,1,Freehold
 8268,4,0,430,370,10698,1,13,4,4.60014,Ready to Move,Vitrified,Y,Unfurnished,East,Resale,Apartment,Mumbai,1,0,1,1,Freehold
 8269,17,3,1062,810,8945,0,23,25,9.49959,Ready to Move,Vitrified,N,Unfurnished,Unknown,Resale,Apartment,Mumbai,6,0,2,4,Freehold
-8270,0,0,875,668,9143,0,23,14,8.000125,Under Construction,Vitrified,N,0,Unknown,Resale,Apartment,Mumbai,2,0,2,0,Freehold
+8270,0,0,875,668,9143,0,23,14,8.000125,Under Construction,Vitrified,N,Unfurnished,Unknown,Resale,Apartment,Mumbai,2,0,2,0,Freehold
 8271,3,0,247,200,1300000,0,19,3,1.3,Ready to Move,Vitrified,Y,Unfurnished,East,Resale,Villa,Mumbai,1,0,1,1,Freehold
 8272,4,0,710,575,5500000,0,19,6,5.5,Ready to Move,Vitrified,N,Unfurnished,Unknown,Resale,Apartment,Mumbai,1,0,1,1,Freehold
 8273,3,1,800,600,11750,8,25,3,9.4,Ready to Move,Vitrified,N,Semi-Furnished,East,Resale,Apartment,Mumbai,2,1,2,1,Freehold
@@ -9402,7 +9402,7 @@ Unnamed: 0,Floor No,Units Available,Covered Area,Carpet Area,Sqft Price,Total Am
 9400,9,11,633,633,41706,90,0,20,26.399898,Under Construction,Vitrified,Y,Semi-Furnished,South - East,New Property,Apartment,Mumbai,2,1,2,1,Freehold
 9401,3,0,550,450,17273,6,18,3,9.50015,Ready to Move,Mosaic,Y,Semi-Furnished,North - West,Resale,Apartment,Mumbai,1,1,1,1,Co-operative Society
 9402,4,0,250,190,24000,0,23,8,6.0,Ready to Move,Vitrified,N,Semi-Furnished,Unknown,Resale,Apartment,Mumbai,1,0,1,1,Freehold
-9403,24,0,2200,1679,34091,0,23,24,13.4999095,Ready to Move,Vitrified,N,0,Unknown,Resale,Apartment,Mumbai,3,0,3,2,Freehold
+9403,24,0,2200,1679,34091,0,23,24,13.4999095,Ready to Move,Vitrified,N,Unfurnished,Unknown,Resale,Apartment,Mumbai,3,0,3,2,Freehold
 9404,35,4,451,365,14500000,0,19,35,14.5,Under Construction,Vitrified,N,Semi-Furnished,Unknown,New Property,Apartment,Mumbai,2,0,1,1,Freehold
 9405,6,1,1050,750,27143,5,28,7,28.50015,Ready to Move,Marble,N,Furnished,West,Resale,Apartment,Mumbai,2,0,2,1,Freehold
 9406,25,0,957,580,23505,89,39,46,22.494285,Under Construction,Vitrified,Y,Furnished,East,New Property,Apartment,Mumbai,2,1,2,1,Freehold
@@ -10056,7 +10056,7 @@ Unnamed: 0,Floor No,Units Available,Covered Area,Carpet Area,Sqft Price,Total Am
 10054,0,0,650,650,20769,0,0,6,13.49985,Ready to Move,Vitrified,N,Semi-Furnished,East,Resale,Apartment,Mumbai,2,0,2,1,Freehold
 10055,7,0,750,580,18000,89,22,7,13.5,Ready to Move,Marble,Y,Furnished,South - East,Resale,Apartment,Mumbai,2,1,2,1,Co-operative Society
 10056,9,0,650,608,30000,0,6,13,19.5,Ready to Move,Vitrified,N,Furnished,Unknown,New Property,Apartment,Mumbai,2,0,2,1,Freehold
-10057,0,0,1000,763,20000,0,23,14,20.0,Ready to Move,Vitrified,N,0,Unknown,Resale,Apartment,Mumbai,2,0,2,2,Freehold
+10057,0,0,1000,763,20000,0,23,14,20.0,Ready to Move,Vitrified,N,Unfurnished,Unknown,Resale,Apartment,Mumbai,2,0,2,2,Freehold
 10058,7,0,860,656,13953,0,23,8,11.99958,Ready to Move,Vitrified,N,Semi-Furnished,Unknown,Resale,Apartment,Mumbai,2,0,2,1,Freehold
 10059,3,0,521,425,17274,1,18,3,8.999754,Ready to Move,Vitrified,N,Semi-Furnished,East,Resale,Apartment,Mumbai,1,0,1,1,Freehold
 10060,4,0,537,537,23277,90,0,13,12.499749,Ready to Move,Vitrified,N,Unfurnished,East,Resale,Apartment,Mumbai,2,1,2,2,Freehold
@@ -10543,7 +10543,7 @@ Unnamed: 0,Floor No,Units Available,Covered Area,Carpet Area,Sqft Price,Total Am
 10541,11,1,800,610,13125,0,23,18,10.5,Ready to Move,Vitrified,N,Unfurnished,Unknown,Resale,Apartment,Mumbai,2,0,2,0,Freehold
 10542,2,0,900,687,19444,0,23,12,17.4996,Ready to Move,Vitrified,N,Semi-Furnished,Unknown,Resale,Apartment,Mumbai,2,0,2,1,Freehold
 10543,10,0,1100,839,22727,0,23,11,24.9997,Ready to Move,Vitrified,N,Semi-Furnished,Unknown,Resale,Apartment,Mumbai,2,0,3,1,Freehold
-10544,1,0,400,305,22000,0,23,7,8.8,0,Vitrified,N,Furnished,Unknown,Resale,Apartment,Mumbai,1,0,1,1,Freehold
+10544,1,0,400,305,22000,0,23,7,8.8,Under Construction,Vitrified,N,Furnished,Unknown,Resale,Apartment,Mumbai,1,0,1,1,Freehold
 10545,7,0,900,687,23889,0,23,7,21.5001,Ready to Move,Vitrified,N,Furnished,Unknown,Resale,Apartment,Mumbai,3,0,3,1,Freehold
 10546,6,0,548,480,13686,2,12,6,7.499928,Ready to Move,Vitrified,Y,Unfurnished,North - East,Resale,Apartment,Mumbai,1,0,1,1,Freehold
 10547,8,0,982,982,14969,0,0,8,14.699558,Ready to Move,Vitrified,Y,Semi-Furnished,West,Resale,Apartment,Mumbai,2,0,2,1,Freehold
@@ -11090,7 +11090,7 @@ Unnamed: 0,Floor No,Units Available,Covered Area,Carpet Area,Sqft Price,Total Am
 11088,1,0,555,425,27027,90,23,5,14.999985,Ready to Move,Vitrified,Y,Unfurnished,East,Resale,Apartment,Mumbai,2,1,1,1,Freehold
 11089,10,0,800,610,20000,0,23,15,16.0,Ready to Move,Vitrified,N,Semi-Furnished,Unknown,Resale,Apartment,Mumbai,2,0,2,1,Freehold
 11090,3,0,800,550,22500,0,31,3,18.0,Ready to Move,Vitrified,Y,Unfurnished,Unknown,Resale,Apartment,Mumbai,2,0,2,1,Freehold
-11091,0,0,450,343,31111,0,23,14,13.99995,Ready to Move,Vitrified,Y,0,Unknown,Resale,Apartment,Mumbai,2,0,1,0,Freehold
+11091,0,0,450,343,31111,0,23,14,13.99995,Ready to Move,Vitrified,Y,Unfurnished,Unknown,Resale,Apartment,Mumbai,2,0,1,0,Freehold
 11092,8,0,570,435,32456,0,23,10,18.49992,Under Construction,Vitrified,N,Unfurnished,East,Resale,Apartment,Mumbai,2,0,2,1,Freehold
 11093,1,0,806,615,24194,0,23,7,19.500364,Ready to Move,Vitrified,N,Unfurnished,Unknown,Resale,Apartment,Mumbai,2,0,2,1,Freehold
 11094,7,2,585,585,30769,2,0,7,17.999865,Ready to Move,Marble,N,Furnished,West,New Property,Apartment,Mumbai,2,0,1,1,Freehold
@@ -11713,7 +11713,7 @@ Unnamed: 0,Floor No,Units Available,Covered Area,Carpet Area,Sqft Price,Total Am
 11711,10,2,920,920,27717,90,0,12,25.49964,Ready to Move,Marble,Y,Unfurnished,East,New Property,Apartment,Mumbai,3,1,3,2,Freehold
 11712,4,0,700,650,335714,0,7,7,13.4999095,Ready to Move,Vitrified,Y,Furnished,East,Resale,Apartment,Mumbai,2,0,2,0,Freehold
 11713,8,0,800,610,2875,0,23,15,2.3,Ready to Move,Vitrified,Y,Furnished,Unknown,Resale,Apartment,Mumbai,2,0,2,3,Freehold
-11714,5,0,350,225,14286,0,35,7,5.0001,0,Vitrified,Y,Furnished,Unknown,Resale,Apartment,Mumbai,1,0,1,1,Freehold
+11714,5,0,350,225,14286,0,35,7,5.0001,Under Construction,Vitrified,Y,Furnished,Unknown,Resale,Apartment,Mumbai,1,0,1,1,Freehold
 11715,6,0,625,477,27200,90,23,6,17.0,Ready to Move,Vitrified,Y,Unfurnished,Unknown,Resale,Apartment,Mumbai,2,1,1,1,Freehold
 11716,11,20,900,618,20555,89,31,35,18.4995,Under Construction,Marble,Y,Unfurnished,East,New Property,Apartment,Mumbai,2,1,2,1,Freehold
 11717,6,0,300,225,20000,2,25,6,6.0,Ready to Move,Vitrified,Y,Unfurnished,Unknown,Resale,Apartment,Mumbai,2,0,1,1,Freehold
@@ -11769,7 +11769,7 @@ Unnamed: 0,Floor No,Units Available,Covered Area,Carpet Area,Sqft Price,Total Am
 11767,8,0,1749,1335,20926,0,23,16,36.599574,Under Construction,Vitrified,N,Unfurnished,Unknown,Resale,Apartment,Mumbai,3,0,3,3,Freehold
 11768,6,0,1200,916,29167,0,23,7,35.0004,Ready to Move,Vitrified,N,Semi-Furnished,Unknown,Resale,Apartment,Mumbai,2,0,4,0,Freehold
 11769,5,4,520,397,20769,0,23,7,10.79988,Ready to Move,Vitrified,N,Furnished,Unknown,Resale,Apartment,Mumbai,1,0,1,5,Freehold
-11770,0,0,656,500,30488,0,23,14,20.000128,Ready to Move,Vitrified,N,0,Unknown,Resale,Apartment,Mumbai,2,0,2,0,Freehold
+11770,0,0,656,500,30488,0,23,14,20.000128,Ready to Move,Vitrified,N,Unfurnished,Unknown,Resale,Apartment,Mumbai,2,0,2,0,Freehold
 11771,5,0,1250,954,22000,1,23,7,27.5,Ready to Move,Vitrified,N,Semi-Furnished,Unknown,Resale,Apartment,Mumbai,3,0,3,3,Freehold
 11772,2,0,730,557,19452,1,23,8,14.19996,Ready to Move,Vitrified,N,Furnished,Unknown,Resale,Apartment,Mumbai,2,0,1,1,Freehold
 11773,10,5,625,477,25600,0,23,13,16.0,Under Construction,Vitrified,N,Unfurnished,Unknown,Resale,Apartment,Mumbai,2,0,2,1,Freehold
@@ -12023,7 +12023,7 @@ Unnamed: 0,Floor No,Units Available,Covered Area,Carpet Area,Sqft Price,Total Am
 12021,5,5,1032,645,19864,90,37,9,20.499648,Under Construction,Vitrified,Y,Unfurnished,East,New Property,Apartment,Mumbai,2,1,2,1,Freehold
 12022,27,2,2800,1800,23571,90,35,31,13.4999095,Ready to Move,Vitrified,Y,Semi-Furnished,East,Resale,Apartment,Mumbai,6,1,4,1,Freehold
 12023,7,0,568,530,19366,0,6,12,10.999888,Under Construction,Vitrified,Y,Furnished,Unknown,Resale,Apartment,Mumbai,2,0,2,2,Freehold
-12024,0,0,780,595,23718,0,23,14,18.50004,Ready to Move,Vitrified,N,0,Unknown,Resale,Builder Floor Apartment,Mumbai,2,0,2,0,Freehold
+12024,0,0,780,595,23718,0,23,14,18.50004,Ready to Move,Vitrified,N,Unfurnished,Unknown,Resale,Builder Floor Apartment,Mumbai,2,0,2,0,Freehold
 12025,9,20,2596,2100,73920000,89,19,15,13.4999095,Under Construction,Marble,Y,Unfurnished,East,New Property,Apartment,Mumbai,4,1,4,1,Freehold
 12026,7,1,1904,1540,32500000,89,19,7,32.5,Ready to Move,Marble,N,Furnished,West,Resale,Penthouse,Mumbai,2,1,2,1,Freehold
 12027,0,0,700,565,20000,11,19,6,14.0,Ready to Move,Mosaic,N,Unfurnished,East,Resale,Apartment,Mumbai,2,1,2,1,Freehold

@@ -1,3 +1,205 @@
+<!DOCTYPE html>
 <html>
-  <h1> Hi how are you </h1>
+  <head>
+    <title>House Price Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  </head>
+  <body>
+    <a href="https://github.com/gmnaik/housepriceprediction.git" class="top-left-link" target="_blank">GitHub Repository Link</a>
+    <h1>House Price Prediction</h1>
+
+    <div class="form-box">
+    <form action="{{url_for('predict_datapoint_dl')}}" method="POST">
+        <div class="form-group">
+          <label for="Floor No">Floor No:</label>
+          <input type="text" id="Floor No" name="Floor No" placeholder="Enter Floor No(integer)">
+        </div>
+
+        <div class="form-group">
+          <label for="Units Available">Units Available:</label>
+          <input type="text" id="Units Available" name="Units Available" placeholder="Units Available(integer)">
+        </div>
+
+        <div class="form-group">
+          <label for="Covered Area">Covered Area:</label>
+          <input type="text" id="Covered Area" name="Covered Area" placeholder="Enter Covered Area(integer)">
+        </div>
+
+        <div class="form-group">
+          <label for="Carpet Area">Carpet Area:</label>
+          <input type="text" id="Carpet Area" name="Carpet Area" placeholder="Enter Carpet Area(integer)">
+        </div>
+
+        <div class="form-group">
+          <label for="Sqft Price">Sqft Price:</label>
+          <input type="text" id="Sqft Price" name="Sqft Price" placeholder="Enter Sqft Price(integer)">
+        </div>
+
+        <div class="form-group">
+          <label for="Total Amenities">Total Amenities:</label>
+          <input type="text" id="Total Amenities" name="Total Amenities" placeholder="Enter Total Amenities(integer)">
+        </div>
+
+        <div class="form-group">
+          <label for="Area Difference (%)">Area Difference (%):</label>
+          <input type="text" id="Area Difference (%)" name="Area Difference (%)" placeholder="Enter Area Difference (%)(integer)">
+        </div>
+
+        <div class="form-group">
+          <label for="Floors">Floors:</label>
+          <input type="text" id="Floors" name="Floors" placeholder="Enter Floors(integer)">
+        </div>
+        
+        <div class="form-group">
+          <label for="Possession Status">Possession Status:</label>
+          <select id="Possession Status" name="Possession Status">
+            <option value="Under Construction">Under Construction</option>
+            <option value="Ready to Move">Ready to Move</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="Flooring Type">Flooring Type:</label>
+          <select id="Flooring Type" name="Flooring Type">
+            <option value="Vitrified">Vitrified</option>
+            <option value="Ceramic Tiles">Ceramic Tiles</option>
+            <option value="Granite">Granite</option>
+            <option value="Marble">Marble</option>
+            <option value="Normal Tiles/Kotah Stone">Normal Tiles/Kotah Stone</option>
+            <option value="Marbonite">Marbonite</option>
+            <option value="Wooden">Wooden</option>
+            <option value="Mosaic">Mosaic</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="Society">Society:</label>
+          <select id="Society" name="Society">
+            <option value="Y">Y</option>
+            <option value="N">N</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="Furnished Type">Furnished Type:</label>
+          <select id="Furnished Type" name="Furnished Type">
+            <option value="Unfurnished">Unfurnished</option>
+            <option value="Semi-Furnished">Semi-Furnished</option>
+            <option value="Furnished">Furnished</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="Facing">Facing:</label>
+          <select id="Facing" name="Facing">
+            <option value="East">East</option>
+            <option value="North - East">North - East</option>
+            <option value="West">West</option>
+            <option value="North - West">North - West</option>
+            <option value="Unknown">Unknown</option>
+            <option value="South - East">South - East</option>
+            <option value="South -West">South -West</option>
+            <option value="North">North</option>
+            <option value="South">South</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="Transaction Type">Transaction Type:</label>
+          <select id="Transaction Type" name="Transaction Type">
+            <option value="New Property">New Property</option>
+            <option value="Resale">Resale</option>
+            <option value="Rent/Lease">Rent/Lease</option>
+            <option value="Rent">Rent</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="Type of Property">Type of Property:</label>
+          <select id="Type of Property" name="Type of Property">
+            <option value="Apartment">Apartment</option>
+            <option value="Residential House">Residential House</option>
+            <option value="Builder Floor Apartment">Builder Floor Apartment</option>
+            <option value="Penthouse">Penthouse</option>
+            <option value="Villa">Villa</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="City">City:</label>
+          <select id="City" name="City">
+            <option value="Thane">Thane</option>
+            <option value="Mumbai">Mumbai</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="Bathroom">Bathroom:</label>
+          <select id="Bathroom" name="Bathroom">
+            <option value="1.0">1.0</option>
+            <option value="2.0">2.0</option>
+            <option value="3.0">3.0</option>
+            <option value="4.0">4.0</option>
+            <option value="5.0">5.0</option>
+            <option value="6.0">6.0</option>
+            <option value="7.0">7.0</option>
+            <option value="10.0">10.0</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="Parking">Parking:</label>
+          <select id="Parking" name="Parking">
+            <option value="1">1</option>
+            <option value="0">0</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="Bedroom">Bedroom:</label>
+          <select id="Bedroom" name="Bedroom">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="Balconies">Balconies:</label>
+          <select id="Balconies" name="Balconies">
+            <option value="0.0">0.0</option>
+            <option value="1.0">1.0</option>
+            <option value="2.0">2.0</option>
+            <option value="3.0">3.0</option>
+            <option value="4.0">4.0</option>
+            <option value="5.0">5.0</option>
+            <option value="6.0">6.0</option>
+            <option value="7.0">7.0</option>
+            <option value="8.0">8.0</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="Ownership Type">Ownership Type:</label>
+          <select id="Ownership Type" name="Ownership Type">
+            <option value="Freehold">Freehold</option>
+            <option value="Co-operative Society">Co-operative Society</option>
+            <option value="Power Of Attorney">Power Of Attorney</option>
+            <option value="Leasehold">Leasehold</option>
+          </select>
+        </div>
+
+        <div style="clear:both;"></div>
+        <input type="submit" value="Submit">
+        
+    </form>
+    </div>
+    <h2> 
+      Estimated House Price in Millions: &#8377; {{results}}  
+    </h2>
+  </body>
 </html>
