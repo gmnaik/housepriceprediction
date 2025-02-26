@@ -16,4 +16,5 @@ flask_cors
 pandas
 numpy
 openpyxl
+pytest
 -e .
