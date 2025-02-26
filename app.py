@@ -13,7 +13,6 @@ app = application
 #Route for  a home page
 @app.route('/')
 def index():
-    
     return render_template('index.html')
 
 @app.route('/predict',methods=['GET','POST'])

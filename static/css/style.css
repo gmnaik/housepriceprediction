@@ -83,3 +83,35 @@ body {
   .form-group label {
     margin-bottom: 5px;
   }
+
+  /* Make number inputs look similar to dropdowns */
+input[type="number"], select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  width: 100%;
+  font-size: 16px;
+  height: 40px; /* Ensure consistent height */
+}
+
+/* Remove the spinner/arrows in number inputs */
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox fix */
+}
+
+/* Match dropdown appearance */
+select {
+  appearance: none; /* Remove default styles */
+  -webkit-appearance: none; /* Safari */
+  -moz-appearance: none; /* Firefox */
+  background-color: white;
+  cursor: pointer;
+}

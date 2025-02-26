@@ -12,42 +12,42 @@
     <form action="{{url_for('predict_datapoint_dl')}}" method="POST">
         <div class="form-group">
           <label for="Floor No">Floor No:</label>
-          <input type="text" id="Floor No" name="Floor No" placeholder="Enter Floor No(integer)">
+          <input type="number" id="Floor No" name="Floor No" min="18" max="60" placeholder="Enter Floor No(integer)">
         </div>
 
         <div class="form-group">
           <label for="Units Available">Units Available:</label>
-          <input type="text" id="Units Available" name="Units Available" placeholder="Units Available(integer)">
+          <input type="number" id="Units Available" name="Units Available" min="18" max="60" placeholder="Units Available(integer)">
         </div>
 
         <div class="form-group">
           <label for="Covered Area">Covered Area:</label>
-          <input type="text" id="Covered Area" name="Covered Area" placeholder="Enter Covered Area(integer)">
+          <input type="number" id="Covered Area" name="Covered Area" min="18" max="60" placeholder="Enter Covered Area(integer)">
         </div>
 
         <div class="form-group">
           <label for="Carpet Area">Carpet Area:</label>
-          <input type="text" id="Carpet Area" name="Carpet Area" placeholder="Enter Carpet Area(integer)">
+          <input type="number" id="Carpet Area" name="Carpet Area" min="18" max="60" placeholder="Enter Carpet Area(integer)">
         </div>
 
         <div class="form-group">
           <label for="Sqft Price">Sqft Price:</label>
-          <input type="text" id="Sqft Price" name="Sqft Price" placeholder="Enter Sqft Price(integer)">
+          <input type="number" id="Sqft Price" name="Sqft Price" min="18" max="60" placeholder="Enter Sqft Price(integer)">
         </div>
 
         <div class="form-group">
           <label for="Total Amenities">Total Amenities:</label>
-          <input type="text" id="Total Amenities" name="Total Amenities" placeholder="Enter Total Amenities(integer)">
+          <input type="number" id="Total Amenities" name="Total Amenities" min="18" max="60" placeholder="Enter Total Amenities(integer)">
         </div>
 
         <div class="form-group">
           <label for="Area Difference (%)">Area Difference (%):</label>
-          <input type="text" id="Area Difference (%)" name="Area Difference (%)" placeholder="Enter Area Difference (%)(integer)">
+          <input type="number" id="Area Difference (%)" name="Area Difference (%)" min="18" max="60" placeholder="Enter Area Difference (%)(integer)">
         </div>
 
         <div class="form-group">
           <label for="Floors">Floors:</label>
-          <input type="text" id="Floors" name="Floors" placeholder="Enter Floors(integer)">
+          <input type="number" id="Floors" name="Floors" min="18" max="60" placeholder="Enter Floors(integer)">
         </div>
         
         <div class="form-group">

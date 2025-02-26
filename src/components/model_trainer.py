@@ -62,17 +62,17 @@ class ModelTrainer:
                 "AdaBoost Regressor": AdaBoostRegressor()
             }
             param_grids = {
-                "Logistic Regression": {
+                "Linear Regression": {
                     'C': [0.01, 0.1, 1, 10, 100],
                     'penalty': ['l1', 'l2', 'elasticnet', 'none'],
                     'solver': ['saga'],
                     'class_weight' : ['balanced'],
                 },
-                "Linear Discriminant Analysis": {
+                "Lasso": {
                     'solver': ['svd', 'lsqr', 'eigen'],
                     'shrinkage': [None, 'auto', 0.1, 0.5, 0.9]  # Only valid for 'lsqr' or 'eigen'
                 },
-                "Decision Tree Classifier": {
+                "Ridge": {
                     'criterion': ['gini', 'entropy'],
                     'class_weight' : ['balanced'],
                     'max_depth': [3, 5, 10,12],
@@ -80,7 +80,7 @@ class ModelTrainer:
                     'min_samples_leaf': [1, 2, 5],
                     'ccp_alpha': [0.0, 0.01, 0.1]
                 },
-                "RandomForest Classifier": {
+                "K-Neighbors Regressor": {
                     'n_estimators': [20,30,50, 100],
                     'max_depth': [3, 5,11],
                     'min_samples_split': [1, 5, 11],
@@ -88,7 +88,7 @@ class ModelTrainer:
                     'class_weight' : ['balanced', 'balanced_subsample']
                 },
                 
-                "LGBM Classifier": {
+                "Decision Tree": {
                     'n_estimators': [50, 70],
                     'num_leaves': [31, 50],
                     'max_depth': [10, 20],
@@ -96,20 +96,20 @@ class ModelTrainer:
                     'is_unbalance': [True, False],  
                     'scale_pos_weight': [1, 10]
                 },
-                "CatBoost Classifier": {
+                "Random Forest Regressor": {
                     'iterations': [200, 230],
                     'depth': [6, 9],
                     'learning_rate': [0.1,0.2],
                     'class_weights': [[1, 5], [1, 10]] 
                 },
                 
-                "SVM Classifier": {
+                "XGBRegressor": {
                     'C': [0.1, 1, 10],
                     'kernel': ['linear', 'poly', 'rbf', 'sigmoid'],
                     'gamma': ['scale', 'auto'],
                     'class_weight': ['balanced']
                 },
-                "KNeighbors Classifier": {
+                "CatBoosting Regressor": {
                     'n_neighbors': [7, 9],
                     'weights': ['uniform', 'distance'],
                     'metric': ['euclidean', 'manhattan', 'minkowski']
