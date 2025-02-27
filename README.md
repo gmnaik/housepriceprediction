@@ -1,1 +1,1 @@
-# House Price Prediction using ML algorithms.
+# House Price Prediction using ML algorithms
