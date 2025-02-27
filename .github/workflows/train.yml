@@ -11,8 +11,6 @@ on:
 
 jobs:
   train-model:
-    needs: check-data-change
-    if: needs.check-data-change.outputs.data_changed == 'true' || github.event_name == 'push'
     runs-on: ubuntu-latest
 
     steps:
