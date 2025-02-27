@@ -35,16 +35,18 @@ jobs:
       #- name: Run tests
         #run: |
           #pytest
+      
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: artifacts
+          path: artifacts/
 
       - name: Add, Commit And Push New Model
         run: |
           git config --global user.email "gmnaik96@gmail.com"
           git config --global user.name "gmnaik"
-          mkdir -p artifacts/
-          mv model.pkl artifacts/
-          mv preprocessor.pkl artifacts/
-          mv scaler_y.pkl artifacts/
-          git add artifacts/scaler_y.pkl artifacts/preprocessor.pkl artifacts/model.pkl
-          git commit -m "Auto-update trained model [skip ci]" || echo "No changes to commit"
+          git add artifacts/
+          git commit -m "Add model and preprocessing files"
           git push origin main
           
