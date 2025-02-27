@@ -44,8 +44,8 @@ jobs:
 
       - name: Add, Commit And Push New Model
         run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "actions@github.com"
+          git config --global user.name "gmnaik"
+          git config --global user.email "gmnaik96@gmail.com"
           git add artifacts/
           git commit -m "Add model and preprocessing files"
           git push https://x-access-token:${{ secrets.GH_PAT }}@github.com/gmnaik/housepriceprediction.git
