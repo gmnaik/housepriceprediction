@@ -1,4 +1,0 @@
-[core]
-    remote = myremoted
-['remote "myremoted"']
-    url = file:///D:/Crio_Projects/dvc-storage
