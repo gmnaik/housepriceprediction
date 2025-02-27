@@ -34,3 +34,22 @@ jobs:
         run: |
           python src/pipeline/train_pipeline.py  # Your training script
       
+      - name: Run tests
+        run: |
+          pytest
+      
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: artifacts
+          path: artifacts/
+
+      - name: Add, Commit And Push New Model
+        run: |
+          git config --global user.name "gmnaik"
+          git config --global user.email "gmnaik96@gmail.com"
+          git add artifacts/preprocessor.pkl artifacts/scaler_y.pkl artifacts/model.pkl
+          git commit -m "Add model and preprocessing files"
+          git push origin HEAD:main  # Simplified push command
+        
+      
