@@ -17,4 +17,5 @@ pandas
 numpy
 openpyxl
 pytest
+dvc
 -e .

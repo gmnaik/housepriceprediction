@@ -1,0 +1,92 @@
+name: Train Model on Data Change
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'artifacts/properties.csv.dvc'  # Runs when dataset changes
+      - 'src/**'     # Runs when code changes
+      - '.github/workflows/train.yml'
+
+jobs:
+  check-data-change:
+    runs-on: ubuntu-latest
+    outputs:
+      data_changed: ${{ steps.check_size_change.outputs.changed }}
+    
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11.0"
+
+      - name: Install DVC
+        run: pip install dvc
+
+      - name: Set up DVC Remote
+        run: |
+          dvc remote modify myremote D:\Crio_Projects\dvc-storage
+          dvc pull  # Fetch the latest dataset
+          
+      - name: Compare Dataset Changes
+        id: check_size_change
+        run: |
+          PREV_SIZE=$(git show HEAD~1:data.dvc | grep 'size' | awk '{print $2}')
+          CURR_SIZE=$(grep 'size' data.dvc | awk '{print $2}')
+
+          if [ -z "$PREV_SIZE" ]; then
+            echo "No previous dataset found. Triggering training."
+            echo "changed=true" >> $GITHUB_OUTPUT
+          else
+            DIFF=$(echo "scale=2; (($CURR_SIZE - $PREV_SIZE) / $PREV_SIZE) * 100" | bc)
+            echo "Dataset changed by $DIFF%"
+            if (( $(echo "$DIFF >= 10.0" | bc -l) )); then
+              echo "changed=true" >> $GITHUB_OUTPUT
+            else
+              echo "changed=false" >> $GITHUB_OUTPUT
+            fi
+          fi
+
+  train-model:
+    needs: check-data-change
+    if: needs.check-data-change.outputs.data_changed == 'true' || github.event_name == 'push'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11.0"
+
+      - name: Install Dependencies
+        run: pip install -r requirements.txt
+
+      - name: Pull Dataset with DVC
+        run: |
+          dvc pull
+          ls -lh artifacts/properties.csv.dvc
+
+      - name: Train Model
+        run: |
+          python src/pipeline/train_pipeline.py  # Your training script
+
+      - name: Save Model Artifacts
+        run: |
+          mkdir -p artifacts/
+          dvc add artifacts/model.pkl
+
+      - name: Commit and Push New Model
+        run: |
+          git config --global user.email "gmnaik96@gmail.com"
+          git config --global user.name "gmnaik"
+          git add artifacts/model.pkl.dvc .gitignore
+          git commit -m "Auto-update trained model [skip ci]" || echo "No changes to commit"
+          git push
+          dvc push

@@ -1,0 +1,6 @@
+[core]
+    remote = myremoted
+['remote "myremote"']
+    url = gdrive://1Z-sd0KhNCcln1E6EivlgD1p0FbRf4dg2
+['remote "myremoted"']
+    url = D:\Crio_Projects\dvc-storage
