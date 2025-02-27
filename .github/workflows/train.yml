@@ -29,8 +29,8 @@ jobs:
 
       - name: Set up DVC Remote
         run: |
-          dvc remote modify myremoted url file:///D:\\Crio_Projects\\dvc-storage
-          dvc pull  # Fetch the latest dataset
+          dvc remote modify myremoted url file:///D:/Crio_Projects/dvc-storage
+          dvc pull
           
       - name: Compare Dataset Changes
         id: check_size_change
