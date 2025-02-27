@@ -1,0 +1,5 @@
+outs:
+- md5: 84651f09c9545da9d4755e7636c89a18
+  size: 5440817
+  hash: md5
+  path: properties.csv
