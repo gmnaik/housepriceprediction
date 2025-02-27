@@ -23,7 +23,10 @@ jobs:
           python-version: "3.11.0"
 
       - name: Install Dependencies
-        run: pip install -r requirements.txt
+        run: |
+          pip install -r requirements.txt
+          pip install ipykernel  # Install ipykernel for Jupyter kernel
+          python -m ipykernel install --user --name=python3 --display-name "Python 3"  # Register the kernel
 
       - name: Train Model
         run: |
