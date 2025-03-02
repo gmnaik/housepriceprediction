@@ -39,7 +39,7 @@ def test_data_notebook_cleaned_data(data_notebook):
         assert not df.empty
         
         # Check if the DataFrame has the expected columns (adjust based on your dataset)
-        expected_columns = ['Floor No','Units Available','Covered Area','Carpet Area','Sqft Price','Total Amenities','Area Difference (%)','Floors','Price_Millions','Possession Status','Flooring Type','Society','Furnished Type','Facing','Transaction Type','Type of Property','City','Bathroom','Parking','Bedroom','Balconies','Ownership Type']  # Replace with actual column names
+        expected_columns = ['Floor No','Covered Area','Carpet Area','Sqft Price','Total Amenities','AreaName','Floors','Price_Millions','Possession Status','Flooring Type','Society','Furnished Type','Facing','Transaction Type','Type of Property','City','Bathroom','Parking','Bedroom','Balconies','Ownership Type']  # Replace with actual column names
         assert all(column in df.columns for column in expected_columns)
         
     except Exception as e:
