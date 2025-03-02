@@ -21,7 +21,7 @@ from src.components.model_trainer import ModelTrainerConfig
 if __name__ == "__main__":
     data_notebook=DataNotebook()
     excelpath = data_notebook.run_notebook()
-    logging.info("Notebook execution is successful")
+    logging.info("Notebook execution is successful.")
     
     data_ingestion = DataIngestion()
     train_path,test_path = data_ingestion.initiate_data_ingestion(excelpath)
