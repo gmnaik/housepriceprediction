@@ -3,6 +3,11 @@
   <head>
     <title>House Price Prediction</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Load jQuery and Select2 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+    
   </head>
   <body>
     <a href="https://github.com/gmnaik/housepriceprediction.git" class="top-left-link" target="_blank">GitHub Repository Link</a>
@@ -11,43 +16,62 @@
     <div class="form-box">
     <form action="{{url_for('predict_datapoint_dl')}}" method="POST">
         <div class="form-group">
-          <label for="Floor No">Floor No:</label>
-          <input type="number" id="Floor No" name="Floor No" min="18" max="60" placeholder="Enter Floor No(integer)">
+          <label for="AreaName">Select a location:</label>
+          <select type="string" id="AreaName" name="AreaName"></select>
         </div>
 
+        <script>
+          $(document).ready(function() {
+              $("#AreaName").select2({
+                  placeholder: "Select a location...",
+                  allowClear: true,
+                  minimumInputLength: 1,  // Start searching after 1 character
+                  ajax: {
+                      url: "/get_areaname",  // Fetch data from Flask API
+                      dataType: "json",
+                      delay: 250,
+                      data: function (params) {
+                          return {
+                              q: params.term  // Send search term as 'q'
+                          };
+                      },
+                      processResults: function (data) {
+                          return { results: data };  // Format response correctly
+                      },
+                      cache: true
+                  }
+              });
+          });
+        </script>
+
         <div class="form-group">
-          <label for="Units Available">Units Available:</label>
-          <input type="number" id="Units Available" name="Units Available" min="18" max="60" placeholder="Units Available(integer)">
+          <label for="Floor No">Floor No:</label>
+          <input type="number" id="Floor No" name="Floor No" min="0" max="90" placeholder="Enter Floor No(integer)">
         </div>
 
         <div class="form-group">
           <label for="Covered Area">Covered Area:</label>
-          <input type="number" id="Covered Area" name="Covered Area" min="18" max="60" placeholder="Enter Covered Area(integer)">
+          <input type="number" id="Covered Area" name="Covered Area" min="70" max="15000" placeholder="Enter Covered Area(integer)">
         </div>
 
         <div class="form-group">
           <label for="Carpet Area">Carpet Area:</label>
-          <input type="number" id="Carpet Area" name="Carpet Area" min="18" max="60" placeholder="Enter Carpet Area(integer)">
+          <input type="number" id="Carpet Area" name="Carpet Area" min="50" max="14000" placeholder="Enter Carpet Area(integer)">
         </div>
 
         <div class="form-group">
           <label for="Sqft Price">Sqft Price:</label>
-          <input type="number" id="Sqft Price" name="Sqft Price" min="18" max="60" placeholder="Enter Sqft Price(integer)">
+          <input type="number" id="Sqft Price" name="Sqft Price" placeholder="Enter Sqft Price(integer)">
         </div>
 
         <div class="form-group">
           <label for="Total Amenities">Total Amenities:</label>
-          <input type="number" id="Total Amenities" name="Total Amenities" min="18" max="60" placeholder="Enter Total Amenities(integer)">
-        </div>
-
-        <div class="form-group">
-          <label for="Area Difference (%)">Area Difference (%):</label>
-          <input type="number" id="Area Difference (%)" name="Area Difference (%)" min="18" max="60" placeholder="Enter Area Difference (%)(integer)">
+          <input type="number" id="Total Amenities" name="Total Amenities" min="0" max="60" placeholder="Enter Total Amenities(integer)">
         </div>
 
         <div class="form-group">
           <label for="Floors">Floors:</label>
-          <input type="number" id="Floors" name="Floors" min="18" max="60" placeholder="Enter Floors(integer)">
+          <input type="number" id="Floors" name="Floors" min="0" max="200" placeholder="Enter Floors(integer)">
         </div>
         
         <div class="form-group">
@@ -109,9 +133,6 @@
           <select id="Transaction Type" name="Transaction Type">
             <option value="New Property">New Property</option>
             <option value="Resale">Resale</option>
-            <option value="Rent/Lease">Rent/Lease</option>
-            <option value="Rent">Rent</option>
-            <option value="Other">Other</option>
           </select>
         </div>
 
@@ -141,10 +162,6 @@
             <option value="2.0">2.0</option>
             <option value="3.0">3.0</option>
             <option value="4.0">4.0</option>
-            <option value="5.0">5.0</option>
-            <option value="6.0">6.0</option>
-            <option value="7.0">7.0</option>
-            <option value="10.0">10.0</option>
           </select>
         </div>
 
@@ -163,8 +180,6 @@
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
           </select>
         </div>
 
@@ -176,10 +191,6 @@
             <option value="2.0">2.0</option>
             <option value="3.0">3.0</option>
             <option value="4.0">4.0</option>
-            <option value="5.0">5.0</option>
-            <option value="6.0">6.0</option>
-            <option value="7.0">7.0</option>
-            <option value="8.0">8.0</option>
           </select>
         </div>
 
@@ -199,7 +210,7 @@
     </form>
     </div>
     <h2> 
-      Estimated House Price in Millions: &#8377; {{results}}  
+      Estimated House Price in Cr: &#8377; {{results}}  
     </h2>
   </body>
 </html>

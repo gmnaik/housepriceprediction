@@ -10,10 +10,34 @@ application = Flask(__name__)
 
 app = application
 
+# Generate 100 city names dynamically
+
+
+area = ['Dombivli East','Andheri West','Malad East','Thane West','Andheri East','Kandivali West','Kolshet Road','Majiwada','Kandivali East',
+            'Goregaon East','Mira Road East','Virar West','Manpada','Prabhadevi','Kalyan West','Dahisar East','Balkum village','Santacruz West',
+            'Naigaon East','Dadar West','Dadar East','Vile Parle East','Vasai West','Nalasopara West','Santacruz East','Vasai East','Jogeshwari Vikhroli Link Road',
+            'Khar West','Kalyan East','Hiranandani Estate','Waghbil','Nalasopara East','Chembur East','Virar East','Pokharan Road Number 2','Thakur Village, Kandivali East',
+            'Matunga West','Bhayandarpada','Oshiwara']
+
+# Generate 100 city names dynamically
+areaname = [{"id": i, "text": area[i]} for i in range(0,len(area))]
+
 #Route for  a home page
 @app.route('/')
 def index():
     return render_template('index.html')
+
+@app.route("/get_areaname", methods=["GET"])
+def get_areaname():
+    search_term = request.args.get("q", "").lower()  # Get search query (case insensitive)
+
+    # If search term is provided, filter matching cities
+    if search_term:
+        filtered_areaname = [c for c in areaname if search_term in c["text"].lower()]
+    else:
+        filtered_areaname = areaname  # If no search, return all
+
+    return jsonify(filtered_areaname)
 
 @app.route('/predict',methods=['GET','POST'])
 def predict_datapoint_dl():
@@ -21,13 +45,14 @@ def predict_datapoint_dl():
         return render_template('index.html')
     else:
         data = CustomData(
+            AreaName = str(request.form.get('AreaName')),
             Floor_No=int(request.form.get('Floor No')),
-            Units_Available=int(request.form.get('Units Available')),
+            #Units_Available=int(request.form.get('Units Available')),
             Covered_Area=int(request.form.get('Covered Area')),
             Carpet_Area=int(request.form.get('Carpet Area')),
             Sqft_Price=int(request.form.get('Sqft Price')),
             Total_Amenities=int(request.form.get('Total Amenities')),
-            Area_Difference=int(request.form.get('Area Difference (%)')),
+            #Area_Difference=int(request.form.get('Area Difference (%)')),
             Floors=int(request.form.get('Floors')),
             PossessionStatus=request.form.get('Possession Status'),
             FlooringType=request.form.get('Flooring Type'),

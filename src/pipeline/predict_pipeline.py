@@ -31,18 +31,19 @@ class PredictPipeline:
     
 
 class CustomData:
-    def __init__(self, Floor_No:int,Units_Available:int,Covered_Area:int,Carpet_Area:int,
-                 Sqft_Price:int,Total_Amenities:int,Area_Difference:int,Floors:int,
+    def __init__(self, AreaName:str,Floor_No:int,Covered_Area:int,Carpet_Area:int,
+                 Sqft_Price:int,Total_Amenities:int,Floors:int,
                  PossessionStatus:str,FlooringType:str,Society:str,
                  FurnishedType:str,Facing:str,Transaction_Type:str,Type_of_Property:str,
                  City:str,Bathroom:str,Parking:str,Bedroom:str,Balconies:str,Ownership_Type:str):
+        self.AreaName = AreaName
         self.Floor_No = Floor_No
-        self.Units_Available = Units_Available
+        #self.Units_Available = Units_Available
         self.Covered_Area = Covered_Area
         self.Carpet_Area = Carpet_Area
         self.Sqft_Price = Sqft_Price
         self.Total_Amenities = Total_Amenities
-        self.Area_Difference = Area_Difference
+        #self.Area_Difference = Area_Difference
         self.Floors = Floors
         self.PossessionStatus = PossessionStatus
         self.FlooringType = FlooringType
@@ -61,13 +62,14 @@ class CustomData:
     def get_data_as_data_frame(self):
         try:
             custom_data_input_dict = {
+                "AreaName" : [self.AreaName],
                 "Floor No" : [self.Floor_No],
-                "Units Available" : [self.Units_Available],
+                #"Units Available" : [self.Units_Available],
                 "Covered Area" : [self.Covered_Area],
                 "Carpet Area" : [self.Carpet_Area],
                 "Sqft Price" : [self.Sqft_Price],
                 "Total Amenities" : [self.Total_Amenities],
-                "Area Difference (%)" : [self.Area_Difference],
+                #"Area Difference (%)" : [self.Area_Difference],
                 "Floors" : [self.Floors],
                 "Possession Status" : [self.PossessionStatus],
                 "Flooring Type" : [self.FlooringType],
